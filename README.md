@@ -1,65 +1,53 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
+# Advanced Building Blocks - Bubble Sort
 
-# Project Name
+> In this project, we implemented the bubble sort algorithm (to sort an array in ascending order). 
+Assignment is focused on the use of yield and passing a block to a method.
+ #bubble_sort method
+ #bubble_sort_by method
 
-> One paragraph statement about the project.
 
-![screenshot](./app_screenshot.png)
+## Screenshot
 
-Additional description about the project and its features.
+![screenshot](screenshot.png)
+
 
 ## Built With
 
-- Major languages,
-- frameworks,
-- technologies used
+- Ruby
+- Rubocop
+
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://repl.it/@abouhid/bubblesortrb#main.rb)
 
-
-## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
-To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
+- Browser (Google Chrome, Mozilla Firefox, Safari or any other browser)
+
 ### Setup
 
-### Install
+- Download or clone the repository's files
 
-### Usage
+## Author
 
-### Run tests
+👤 **Rocio Martinez**
 
-### Deployment
+- Github: [@Rocio01](https://github.com/Rocio01)
+- Twitter: [@rugiada8801](https://twitter.com/rugiada8801)
+- Linkedin: [zulma-martinez-5247a31a8](https://www.linkedin.com/in/zulma-martinez-5247a31a8/)
 
+👤 **Alexandre Bouhid**
 
-
-## Authors
-
-👤 **Author1**
-
-- Github: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- Linkedin: [linkedin](https://linkedin.com/linkedinhandle)
-
-👤 **Author2**
-
-- Github: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- Linkedin: [linkedin](https://linkedin.com/linkedinhandle)
+- Github: [@abouhid](https://github.com/abouhid)
+- LinkedIn: [Alexandre Bouhid](https://www.linkedin.com/in/alexandrebouhid/)
 
 ## 🤝 Contributing
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check the [issues page](issues/).
+Feel free to check the [issues page](https://github.com/abouhid/Bubble-Sort-Project/issues).
 
 ## Show your support
 
@@ -67,9 +55,10 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Microverse
+- GitHub
+- TheOdinProject
+- Ruby
 
 ## 📝 License
 
