@@ -21,15 +21,26 @@
 
   #  my_each_with_index([2,10,12,15]) {|e, index| puts (e + e) if index.odd?}
 
-  def my_select(array)
-    second_array = []
-    my_each(array) do |w|
-      if yield (w)
-        second_array.push(w)
-      end
-    end
-    second_array
-  end
-
+  # def my_select(array)
+  #   second_array = []
+  #   my_each(array) do |w|
+  #     if yield (w)
+  #       second_array.push(w)
+  #     end
+  #   end
+  #   second_array
+  # end
+ 
+  # puts my_select([1, 2, 3]){|x| x != 2}
   
-  puts my_select([1, 2, 3]){|x| x != 2}  
+  # def my_all?(array)
+	# 	my_each(array) do |w|
+	# 		if yield(w) == false
+	# 			 return false
+	# 		end
+	# 	end
+	# 	true
+	# end
+
+  # puts my_all?([1]){|x| x == 1 }
+  # puts my_all?(["hello"]){|x| x == 1 }

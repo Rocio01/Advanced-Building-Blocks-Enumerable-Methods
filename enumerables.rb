@@ -30,5 +30,16 @@ module Enumerable
   end
   
   # puts my_select([1, 2, 3]){|x| x != 2}  
-  
+
+  def my_all?(array)
+		my_each(array) do |w|
+			if yield(w) == false
+				return false
+			end
+		end
+		true
+  end
+  # puts my_all?([1]){|x| x == 1 }
+  # puts my_all?(["hello"]){|x| x == 1 }
+
 end
