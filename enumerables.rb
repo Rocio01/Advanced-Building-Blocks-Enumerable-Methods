@@ -53,4 +53,16 @@ module Enumerable
   # puts my_any?([1,2,3]) { |n| n > 0 }
   # puts my_any?([1,2,3]) { |n| n < 0 }
 
+  def my_none?(array)
+		my_each(array) do |w|
+			if yield(w) == true
+				return false
+			end
+		end
+		true
+  end
+
+  # puts my_none?([1]){|x| x == 1 }
+  # puts my_none?(["hello"]){|x| x == 1 }
+
 end
