@@ -7,6 +7,7 @@ module Enumerable
           w += 1
         end
     end
+    # my_each([2,10,12,15]) {|e| print e + e}
 
     def my_each_with_index(array)
       w = 0
@@ -16,5 +17,18 @@ module Enumerable
       end
         array
    end
+  #  my_each_with_index([2,10,12,15]) {|e, index| puts (e + e) if index.odd?}
+  
+  def my_select(array)
+    second_array = []
+    my_each(array) do |w|
+      if yield (w)
+        second_array.push(w)
+      end
+    end
+    second_array
+  end
+  
+  # puts my_select([1, 2, 3]){|x| x != 2}  
   
 end
