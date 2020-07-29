@@ -21,15 +21,15 @@
 
   #  my_each_with_index([2,10,12,15]) {|e, index| puts (e + e) if index.odd?}
 
-  # def my_select(array)
-  #   second_array = []
-  #   my_each(array) do |w|
-  #     if yield (w)
-  #       second_array.push(w)
-  #     end
-  #   end
-  #   second_array
-  # end
+   def my_select(array)
+    second_array = []
+     my_each(array) do |w|
+       if yield (w)
+        second_array.push(w)
+       end
+     end
+     second_array
+   end
  
   # puts my_select([1, 2, 3]){|x| x != 2}
   
@@ -56,18 +56,48 @@
   # puts my_any?([1,2,3]) { |n| n > 0 }
   # puts my_any?([1,2,3]) { |n| n < 0 }
   
-  def my_none?(array)
-		my_each(array) do |w|
-			if yield(w) == true
-				return false
-			end
-		end
-		true
-  end
+  # def my_none?(array)
+	# 	my_each(array) do |w|
+	# 		if yield(w) == true
+	# 			return false
+	# 		end
+	# 	end
+	# 	true
+  # end
 
-    puts my_none?([1]){|x| x == 1 }
-    puts my_none?(["hello"]){|x| x == 1 }
+  #   puts my_none?([1]){|x| x == 1 }
+  #   puts my_none?(["hello"]){|x| x == 1 }
 
+  # def my_count (x)
+  #   count = 0
+  #   my_each(x) do |w|
+  #     if w.size > 1
+  #       count += 1
+  #     end
+  #   end
+  
+  # end
+
+#   def my_count(x) 
+#     count = 0  
+#     my_each(x) do |w|
+#            if w.size > 1
+#             count += 1
+#            end
+#      end
+    
+#     count
+# end 
+
+def my_count (x)
+  my_select(x){|w| yield(w)}.size
+end
+      
+puts my_count([1,2,3,4,8]) {|w| w%2 == 0} 
+
+ 
+
+# puts my_count (["hello", "two"])
 
 
 

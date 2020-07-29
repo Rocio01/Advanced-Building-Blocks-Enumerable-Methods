@@ -65,4 +65,10 @@ module Enumerable
   # puts my_none?([1]){|x| x == 1 }
   # puts my_none?(["hello"]){|x| x == 1 }
 
+  def my_count (x)
+    my_select(x){|w| yield(w)}.size
+  end
+        
+  # puts my_count([1,2,3,4,8]) {|w| w%2 == 0} 
+
 end
