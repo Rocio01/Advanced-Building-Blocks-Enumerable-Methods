@@ -31,7 +31,7 @@
      second_array
    end
  
-  # puts my_select([1, 2, 3]){|x| x != 2}
+  #  puts my_select([1, 2, 3]){|x| x != 2}
   
   # def my_all?(array)
 	# 	my_each(array) do |w|
@@ -89,15 +89,27 @@
 #     count
 # end 
 
-def my_count (x)
-  my_select(x){|w| yield(w)}.size
-end
+ def my_count (x)
+   my_select(x){|w| yield(w)}.size
+ end
       
-puts my_count([1,2,3,4,8]) {|w| w%2 == 0} 
+ puts my_count([1,2,3,4,8]) {|w| w%2 == 0} 
 
- 
 
-# puts my_count (["hello", "two"])
+
+def my_map (array, &block)
+  second_array = []
+  my_each(array) do |w|    
+    second_array.push(block.call(w))
+  end
+  second_array
+end 
+
+ puts my_map([1, 2, 3]){|x| x + 3}
+
+
+
+
 
 
 

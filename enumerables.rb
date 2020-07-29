@@ -1,4 +1,4 @@
-module Enumerable
+
   
     def my_each(array) 
         w = 0
@@ -50,7 +50,7 @@ module Enumerable
     end
     false
   end
-  # puts my_any?([1,2,3]) { |n| n > 0 }
+  #  puts my_any?([1,2,3]) { |n| n > 0 }
   # puts my_any?([1,2,3]) { |n| n < 0 }
 
   def my_none?(array)
@@ -65,10 +65,19 @@ module Enumerable
   # puts my_none?([1]){|x| x == 1 }
   # puts my_none?(["hello"]){|x| x == 1 }
 
-  def my_count (x)
-    my_select(x){|w| yield(w)}.size
+  def my_count (array)
+    my_select(array){|w| yield(w)}.size
   end
-        
-  # puts my_count([1,2,3,4,8]) {|w| w%2 == 0} 
+       
+  #  puts my_count([1,2,3,4,8]) {|w| w%2 == 0} 
 
-end
+  def my_map (array, &block)
+    second_array = []
+    my_each(array) do |w|    
+      second_array.push(block.call(w))
+    end
+    second_array
+  end
+
+  # puts my_map([1, 2, 3]){|x| x + 3}
+  # puts my_map([1, 2, 3]){|x| x <= 3}
