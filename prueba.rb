@@ -105,9 +105,20 @@ def my_map (array, &block)
   second_array
 end 
 
- puts my_map([1, 2, 3]){|x| x + 3}
+def my_inject(array)
+  my_each(self) do |w|
+      array = yield(array, w)
+  end
+  array
+end
 
+puts [1,2,3,4].my_inject(0){|sum, num| sum + num} 
 
+def multiply_els(array)
+  array.my_inject(1){|multipliyer, num| multipliyer * num}
+end 
+
+puts multiply_els([2,4,5]) 
 
 
 
