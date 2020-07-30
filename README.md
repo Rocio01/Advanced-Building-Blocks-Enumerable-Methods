@@ -1,4 +1,4 @@
-# Advanced Building Blocks - Bubble Sort
+# Advanced-Building-Blocks-Enumerables
 
 > In this project, I implemented my own version of Ruby’s enumerable methods.
  - #my_each
