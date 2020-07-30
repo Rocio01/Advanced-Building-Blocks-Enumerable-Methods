@@ -1,10 +1,16 @@
 # Advanced Building Blocks - Bubble Sort
 
-> In this project, we implemented the bubble sort algorithm (to sort an array in ascending order). 
-Assignment is focused on the use of yield and passing a block to a method.
- #bubble_sort method
- #bubble_sort_by method
-
+> In this project, I implemented my own version of Ruby’s enumerable methods.
+ - #my_each
+ - #my_each_with_index
+ - #my_select
+ - #my_all?
+ - #my_any?
+ - #my_none?
+ - #my_count
+ - #my_map
+ - #my_inject
+ - Test #my_inject by creating a method called #multiply_els
 
 ## Screenshot
 
@@ -15,11 +21,6 @@ Assignment is focused on the use of yield and passing a block to a method.
 
 - Ruby
 - Rubocop
-
-
-## Live Demo
-
-[Live Demo Link](https://repl.it/@abouhid/bubblesortrb#main.rb)
 
 
 ### Prerequisites
@@ -38,16 +39,11 @@ Assignment is focused on the use of yield and passing a block to a method.
 - Twitter: [@rugiada8801](https://twitter.com/rugiada8801)
 - Linkedin: [zulma-martinez-5247a31a8](https://www.linkedin.com/in/zulma-martinez-5247a31a8/)
 
-👤 **Alexandre Bouhid**
-
-- Github: [@abouhid](https://github.com/abouhid)
-- LinkedIn: [Alexandre Bouhid](https://www.linkedin.com/in/alexandrebouhid/)
-
 ## 🤝 Contributing
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/abouhid/Bubble-Sort-Project/issues).
+Feel free to check the [issues page](https://github.com/Rocio01/Advanced-Building-Blocks---Enumerables/issues).
 
 ## Show your support
 
