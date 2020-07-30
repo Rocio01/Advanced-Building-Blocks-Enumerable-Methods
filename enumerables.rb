@@ -5,7 +5,7 @@ def my_each(array)
     w += 1
   end
 end
-#  my_each([2,10,12,15]) {|e| print e + e}
+#  my_each([2,10,12,15]) {|e| puts e + e}
 
 def my_each_with_index(array)
   w = 0
@@ -82,7 +82,7 @@ end
 # puts [1,2,3,4].my_inject(0){|sum, num| sum + num}
 
 def multiply_els(array)
-  array.my_inject(1) { |multipliyer, num| multipliyer * num }
+  array.my_inject(1) { |multiplier, num| multiplier * num }
 end
 
 # puts multiply_els([2,4,5])

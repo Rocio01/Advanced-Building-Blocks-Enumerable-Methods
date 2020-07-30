@@ -12,9 +12,9 @@
  - #my_inject
  - Test #my_inject by creating a method called #multiply_els
 
-## Screenshot
+## live-demo
 
-![screenshot](screenshot.png)
+![live demo](https://repl.it/@Rocio01/IncompatibleAcceptableDeletions#main.rb)
 
 
 ## Built With
