@@ -1,4 +1,4 @@
-# Advanced-Building-Blocks-Enumerables
+# Advanced-Building-Blocks-Enumerable-Methods
 
 > In this project, I implemented my own version of Ruby’s enumerable methods.
  - #my_each
