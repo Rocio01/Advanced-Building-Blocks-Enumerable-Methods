@@ -14,7 +14,7 @@
 
 ## live-demo
 
-![live demo](https://repl.it/@Rocio01/IncompatibleAcceptableDeletions#main.rb)
+- [live demo](https://repl.it/@Rocio01/IncompatibleAcceptableDeletions#main.rb)
 
 
 ## Built With
