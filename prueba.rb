@@ -65,5 +65,17 @@ module Enumerable
   # puts [1, 2, 3].my_any?(String)
   # puts([1, 1, 2].my_any? { |x| x == 1 })
 
+  def my_none?(argument = nil, &block)
+    my_each { |w| return false if block.call(w) } if block_given?
+    my_each { |w| return false if w == argument } if [Integer, String].include?(argument.class)
+    my_each { |w| return false if w =~ argument } if argument.class == Regexp
+    my_each { |w| return false if w.class == argument } if argument.class == Class
+    my_each { |w| return false if w } if !block_given? && !argument
+    true
+  end
+
+  # puts([1, 2].my_none? { |x| x == 1 })
+  # puts(['hello'].my_none? { |x| x == 1 })
+
   # end of the module
 end
