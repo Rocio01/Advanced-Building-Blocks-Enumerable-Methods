@@ -38,7 +38,32 @@ module Enumerable
       to_enum
     end
   end
-  puts([1, 2, 3].my_select { |x| x != 2 })
+  #   puts([1, 2, 3].my_select { |x| x != 2 })
+
+  def my_all?(argument = nil, &block)
+    my_each { |w| return false unless block.call(w) } if block_given?
+    my_each { |w| return false unless w == argument } if [Integer, String].include?(argument.class)
+    my_each { |w| return false unless w =~ argument } if argument.class == Regexp
+    my_each { |w| return false unless w.class == argument } if argument.class == Class
+    my_each { |w| return false unless w } if !block_given? && !argument
+    true
+  end
+  # puts ['j', 2].my_all?(String)
+  # puts([1, 1, 2].my_all? { |x| x == 1 })
+  # puts([1, 1, 2].my_all?(Integer))
+
+  def my_any?(argument = nil, &block)
+    my_each { |w| return true if block.call(w) } if block_given?
+    my_each { |w| return true if w == argument } if [Integer, String].include?(argument.class)
+    my_each { |w| return true if w =~ argument } if argument.class == Regexp
+    my_each { |w| return true if w.class == argument } if argument.class == Class
+    my_each { |w| return true if w } if !block_given? && !argument
+    false
+  end
+
+  # puts [1, 2, 'j'].my_any?(String)
+  # puts [1, 2, 3].my_any?(String)
+  # puts([1, 1, 2].my_any? { |x| x == 1 })
 
   # end of the module
 end
