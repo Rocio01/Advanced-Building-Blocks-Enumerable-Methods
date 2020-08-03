@@ -80,17 +80,28 @@ module Enumerable
   def my_count(argument = nil)
     x = 0
     my_each { |w| x += 1 if yield(w) == true } if block_given?
-     x if block_given?
+    x if block_given?
 
     my_each { |w| x += 1 if w == argument } if argument
-     x if argument
+    x if argument
 
     my_each { x += 1 } if !argument && !block_given?
-    x 
+    x
   end
   # puts ([1,2,3,4,8].my_count {|w| w%2 == 0})
   # puts ([1,2,3,4,8].my_count)
   # p([1, 2, 4, 23, 34, "w", "w"].my_count("w"))
-  
+
+  def my_map(&block)
+    if block_given?
+      second_array = []
+      my_each { |w| second_array.push(block.call(w)) }
+      second_array
+    else to_enum
+    end
+  end
+  # puts([1, 2, 3].my_map { |x| x + 3 })
+  # puts([1, 2, 3].my_map { |x| x <= 3 })
+
   # end of the module
 end
