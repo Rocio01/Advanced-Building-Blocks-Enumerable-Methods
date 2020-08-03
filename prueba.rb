@@ -77,5 +77,20 @@ module Enumerable
   # puts([1, 2].my_none? { |x| x == 1 })
   # puts(['hello'].my_none? { |x| x == 1 })
 
+  def my_count(argument = nil)
+    x = 0
+    my_each { |w| x += 1 if yield(w) == true } if block_given?
+     x if block_given?
+
+    my_each { |w| x += 1 if w == argument } if argument
+     x if argument
+
+    my_each { x += 1 } if !argument && !block_given?
+    x 
+  end
+  # puts ([1,2,3,4,8].my_count {|w| w%2 == 0})
+  # puts ([1,2,3,4,8].my_count)
+  # p([1, 2, 4, 23, 34, "w", "w"].my_count("w"))
+  
   # end of the module
 end
