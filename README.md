@@ -1,65 +1,49 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
+# Advanced-Building-Blocks-Enumerable-Methods
 
-# Project Name
+> In this project, I implemented my own version of Ruby’s enumerable methods.
+ - #my_each
+ - #my_each_with_index
+ - #my_select
+ - #my_all?
+ - #my_any?
+ - #my_none?
+ - #my_count
+ - #my_map
+ - #my_inject
+ - Test #my_inject by creating a method called #multiply_els
 
-> One paragraph statement about the project.
+## live-demo
 
-![screenshot](./app_screenshot.png)
+- [live demo](https://repl.it/@Rocio01/RotatingPungentKeys)
 
-Additional description about the project and its features.
 
 ## Built With
 
-- Major languages,
-- frameworks,
-- technologies used
+- Ruby
+- Rubocop
 
-## Live Demo
-
-[Live Demo Link](https://livedemo.com)
-
-
-## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
-To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
+- Browser (Google Chrome, Mozilla Firefox, Safari or any other browser)
+
 ### Setup
 
-### Install
+- Download or clone the repository's files
 
-### Usage
+## Author
 
-### Run tests
+👤 **Rocio Martinez**
 
-### Deployment
-
-
-
-## Authors
-
-👤 **Author1**
-
-- Github: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- Linkedin: [linkedin](https://linkedin.com/linkedinhandle)
-
-👤 **Author2**
-
-- Github: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- Linkedin: [linkedin](https://linkedin.com/linkedinhandle)
+- Github: [@Rocio01](https://github.com/Rocio01)
+- Twitter: [@rugiada8801](https://twitter.com/rugiada8801)
+- Linkedin: [zulma-martinez-5247a31a8](https://www.linkedin.com/in/zulma-martinez-5247a31a8/)
 
 ## 🤝 Contributing
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check the [issues page](issues/).
+Feel free to check the [issues page](https://github.com/Rocio01/Advanced-Building-Blocks---Enumerables/issues).
 
 ## Show your support
 
@@ -67,9 +51,10 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Microverse
+- GitHub
+- TheOdinProject
+- Ruby
 
 ## 📝 License
 
