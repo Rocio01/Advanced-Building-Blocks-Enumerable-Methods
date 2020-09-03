@@ -2,24 +2,24 @@ require_relative '../enumerables.rb'
 
 describe Enumerable do
   base_arr = [43, 5, 78, 10, 62]
-  let(:str_arr) { %w[beer joke night mic comedy]}
+  let(:str_arr) { %w[beer joke night mic comedy] }
   let(:range) { (4..16) }
 
   context '#my_each' do
     it 'returns inputed array' do
-      expect((base_arr.my_each).to_a).to eql(base_arr)
+      expect(base_arr.my_each.to_a).to eql(base_arr)
     end
   end
 
   context '#my_each_with_index' do
     it 'returns inputed array with indeces' do
-      expect((base_arr.my_each_with_index).to_a).to eql(base_arr)
+      expect(base_arr.my_each_with_index.to_a).to eql(base_arr)
     end
   end
 
   context '#my_select' do
     it 'returns elements in array matching condition' do
-      expect(range.my_select { |x| x % 4 == 0}).to eql([4, 8, 12, 16])
+      expect(range.my_select { |x| x % 4 == 0 }).to eql([4, 8, 12, 16])
     end
     it 'returns string array matching condition' do
       expect(str_arr.my_select { |x| x.length > 3 }).to eql(%w[beer joke night comedy])
@@ -28,14 +28,55 @@ describe Enumerable do
 
   context '#my_all?' do
     it 'returns true if all elements match condition' do
-      expect(str_arr.my_all? { |x| x.is_a? String}).to eql(true)
+      expect(str_arr.my_all? { |x| x.is_a? String }).to eql(true)
     end
     it 'returns false if all elements do not match condition' do
       expect(range.my_all? { |x| x > 5 }).to eql(false)
     end
     it 'returns false if all elements do not match condition' do
-      expect(base_arr.my_all? { |x| x % 2 == 0 }).to eql(false)
+      expect(base_arr.my_all?(&:even?)).to eql(false)
     end
+  end
+
+  context '#my_any?' do
+    it 'return true if one element match condition' do
+      expect(str_arr.my_any? { |x| x == 'beer' }).to eql(true)
+    end
+
+    it 'return false if any element match condition' do
+      expect(base_arr.my_any? { |x| x == 1 }).to eql(false)
+    end
+
+    it 'return false if any element match condition' do
+      expect(range.my_any? { |x| x == 1 }).to eql(false)
+    end
+  end
+
+  context '#my_none?' do
+    it 'returns false if any elements match condition' do
+      expect(str_arr.my_none? { |x| x.is_a? String }).to eql(false)
+    end
+    it 'returns true if any elements do not match condition' do
+      expect(range.my_none? { |x| x > 20 }).to eql(true)
+    end
+    it 'returns false if any elements  match condition' do
+      expect(base_arr.my_none?(&:even?)).to eql(false)
+    end
+  end
+
+  context '#my_count' do
+    it 'returns the number of items in enum through enumeration.' do
+      expect(str_arr.my_count).to eql(5)
+    end
+
+    it 'If a block is given, it counts the number of elements yielding a true value.' do
+      expect(range.my_count { |x| x % 4== 0 }).to eql(4)
+    end
+
+    it 'returns the number of items in enum through enumeration.' do
+      expect(base_arr.my_count(10)).to eql(1)
+    end
+
   end
 
 end
