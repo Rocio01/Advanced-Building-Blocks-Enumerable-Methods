@@ -76,7 +76,33 @@ describe Enumerable do
     it 'returns the number of items in enum through enumeration.' do
       expect(base_arr.my_count(10)).to eql(1)
     end
+  end
 
+  context '#my_map' do
+    it 'If a block given returns the result of the block' do
+      expect(base_arr.my_map { |x| x * 2 }).to eql([86, 10, 156, 20, 124])
+    end
+    it 'if no block given returns enum' do
+      expect(range.my_map).to be_an Enumerator
+    end
+  end
+
+  context '#my_inject' do
+    it 'Combines all elements of enum by applying a binary operation, specified by a symbol' do
+      expect(base_arr.my_inject(:+)).to eql(198)
+    end
+    it 'Combines all elements of enum by applying a binary operation, specified by a block' do
+      expect(range.my_inject(2) { |x, y| x + y}).to eql(132)
+    end
+    it 'Returns longest word in array' do
+      expect(str_arr.my_inject).to eql('comedy')
+    end
+  end
+
+  context '#multiply_els' do
+    it 'Returns multiplication of arguments passed' do
+      expect(base_arr.multiply_els).to eql(10397400)
+    end
   end
 
 end
