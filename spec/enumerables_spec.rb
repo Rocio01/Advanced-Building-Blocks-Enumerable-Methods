@@ -70,7 +70,7 @@ describe Enumerable do
     end
 
     it 'If a block is given, it counts the number of elements yielding a true value.' do
-      expect(range.my_count { |x| x % 4== 0 }).to eql(4)
+      expect(range.my_count { |x| x % 4 == 0 }).to eql(4)
     end
 
     it 'returns the number of items in enum through enumeration.' do
@@ -92,17 +92,16 @@ describe Enumerable do
       expect(base_arr.my_inject(:+)).to eql(198)
     end
     it 'Combines all elements of enum by applying a binary operation, specified by a block' do
-      expect(range.my_inject(2) { |x, y| x + y}).to eql(132)
+      expect(range.my_inject(2) { |x, y| x + y }).to eql(132)
     end
     it 'Returns longest word in array' do
-      expect(str_arr.my_inject).to eql('comedy')
+      expect(str_arr.my_inject { |x, y| x.length > y.length ? x : y }).to eql('comedy')
     end
   end
 
   context '#multiply_els' do
     it 'Returns multiplication of arguments passed' do
-      expect(base_arr.multiply_els).to eql(10397400)
+      expect(base_arr.multiply_els).to eql(10_397_400)
     end
   end
-
 end
